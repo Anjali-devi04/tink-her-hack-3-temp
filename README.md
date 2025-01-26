@@ -16,19 +16,19 @@
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[The website is a real-time alert platform for reporting emergencies like theft. By clicking an "Alert" button, users can instantly notify the nearest police station and registered neighbors about the issue. The system ensures quick communication and community support, fostering a safer environment]
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+[safety issues]
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+[Just use our website :)]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
+- [Html,css,javascript]
+- [node.js]
 - [Libraries used]
 - [Tools used]
 
