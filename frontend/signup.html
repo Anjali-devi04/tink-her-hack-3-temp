@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeAlert</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <!-- <form method="POST" action="/alerts/signup-step-2/">
+            {% csrf_token %} -->
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="dob">Date of Birth:</label>
+            <input type="date">
+            
+            <!-- <input type="number" id="age" name="age" placeholder="Enter your age" required> -->
+
+            <label for="streetname">Street Name:</label>
+            <input type="text" id="streetname" name="streetname" placeholder="Enter your street name" required>
+
+            <label for="street">Street No.:</label>
+            <input type="text" id="streetno" name="streetno" placeholder="Enter your street number" required>
+
+            <label for="housename">House Name:</label>
+            <input type="text" id="housename" name="housename" placeholder="Enter your house name" required>
+
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter your pin code" required>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" placeholder="Enter your district" required>
+
+            <button type="submit" onclick="location.href='verify.html'">Next</button>
+        </form>
+    </div>
+</body>
+</html>
