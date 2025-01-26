@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report</title>
+    <link rel="stylesheet" href="/public/styles/style(report).css">
+</head>
+<body>
+    <div class="container">
+        <h2>Incident Reports</h2>
+        <input type="date" id="searchDate" placeholder="Search incidents by date" />
+        <div id="incidentResults">
+            <!-- All incidents will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Example data of incidents
+        const incidents = [
+            {
+                date: "2024-12-10",
+                title: "Incident Happened on 10/12/2024",
+                description: "On 10th December 2024, burglars broke into the Johnson family home while they were out. Electronics, jewelry, and cash worth $20,000 were stolen. Police are investigating."
+            },
+            {
+                date: "2024-12-14",
+                title: "Incident Happened on 14/12/2024",
+                description: "A fire broke out in the Wilson home on 14th December 2024 due to an electrical short circuit. Thankfully, no injuries were reported, but the property sustained severe damage."
+            },
+            {
+                date: "2024-12-15",
+                title: "Incident Happened on 15/12/2024",
+                description: "A domestic dispute escalated into an assault at the Miller household on 15th December 2024. One individual has been hospitalized, and authorities have intervened."
+            },
+            {
+                date: "2025-01-14",
+                title: "Incident Happened on 14/01/2025",
+                description: "On 14th January 2025, burglars broke into the John family home while they were out. Jewelry and cash worth $10,000 were stolen."
+            },
+            {
+                date: "2024-11-14",
+                title: "Incident Happened on 14/11/2024",
+                description: "A robbery was reported at the Anderson house on 14th November 2024. The robbers escaped with valuable heirlooms and cash. Police are on the lookout for suspects."
+            },
+            {
+                date: "2024-10-14",
+                title: "Incident Happened on 14/10/2024",
+                description: "An attempted break-in was reported at the Baker family house on 14th October 2024. Neighbors noticed suspicious activity and alerted the police, preventing a robbery."
+            },
+            {
+                date: "2024-12-23",
+                title: "Incident Happened on 23/12/2024",
+                description: "On 23rd December 2024, vandals spray-painted graffiti and damaged property at Carter's home. Residents have called for increased security in the neighborhood."
+            },
+            {
+                date: "2024-12-14",
+                title: "Incident Happened on 14/12/2024",
+                description: "A tragic homicide occurred in the Smith residence on 14th December 2024. Authorities suspect foul play, and the investigation is ongoing."
+            }
+        ];
+
+        const incidentResults = document.getElementById("incidentResults");
+
+        // Function to display incidents
+        function displayIncidents(filteredIncidents) {
+            incidentResults.innerHTML = ""; // Clear previous results
+            if (filteredIncidents.length > 0) {
+                filteredIncidents.forEach(incident => {
+                    // Create and display incident cards
+                    const incidentDiv = document.createElement("div");
+                    incidentDiv.className = "incident";
+                    incidentDiv.innerHTML = `
+                        <h3>${incident.title}</h3>
+                        <p>${incident.description}</p>
+                    `;
+                    incidentResults.appendChild(incidentDiv);
+                });
+            } else {
+                incidentResults.innerHTML = '<p class="no-results">No incidents found for this date.</p>';
+            }
+        }
+
+        // Display all incidents on page load
+        displayIncidents(incidents);
+
+        // Filter incidents by date when input changes
+        document.getElementById("searchDate").addEventListener("input", function () {
+            const searchDate = this.value; // Get the date input value
+            const filteredIncidents = searchDate
+                ? incidents.filter(incident => incident.date === searchDate) // Filter by date
+                : incidents; // Show all if no date is entered
+            displayIncidents(filteredIncidents);
+        });
+    </script>
+</body>
+</html>

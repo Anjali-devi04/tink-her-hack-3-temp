@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhZGllbnQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 20px; /* Spacing between left and right sections */
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1 1 calc(50% - 20px); /* Two equal-width columns */
+    min-width: 300px; /* Minimum width for smaller screens */
+    box-sizing: border-box; /* Ensure padding/border doesn't affect width */
+}
+
+h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+    color: #fff;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-sizing: border-box; /* Ensure padding fits within input */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #003f7f);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .section {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
