@@ -1,15 +1,15 @@
 
 
-# [Alert system] 🎯
+# Alert system 🎯
 
 
 ## Basic Details
-### Team Name: [TeamNotFound]
+### Team Name: TeamNotFound
 
 
 ### Team Members
-- Member 1: [Anjali Devi N] - [Government Engineering College,Thrissur]
-- Member 2: [Devi Nandana K] - [Government Engineering College,Thrissur]
+- Member 1: Anjali Devi N - Government Engineering College,Thrissur
+- Member 2: Devi Nandana K - Government Engineering College,Thrissur
 - Member 3: [Name] - [College]
 
 ### Hosted Project Link
