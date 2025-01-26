@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="/styles/style1.css">
+
+</head>
+<body>
+    <form action="/verify" method="POST">
+        <div class="container">
+            <label>Nearby Station Name:</label>
+            <select id="police_station" name="police_station" required>
+                <option value="">Select a Police Station</option>
+                <option value="station_1">Police Station 1</option>
+                <option value="station_2">Police Station 2</option>
+                <option value="station_3">Police Station 3</option>
+            </select>
+    
+            <label>Police Name:</label>
+            <input type="text" id="Policename" name="Policename" required>
+    
+            <button type="submit">Verify</button>
+        </div>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page with Profile and Menu</title>
+    <link rel="stylesheet" href="/public/styles/style(profile).css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <div class="profile-logo">AB</div>
+            <div class="profile-name">Alex Brown</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="report.html">Reports</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="disclaimer">
+            <h1>Disclaimer</h1>
+            <p>
+                Please read the following disclaimer before proceeding. By clicking "I Agree", you acknowledge that you have read and understood the terms.
+            </p>
+        </div>
+        <button id="alertButton">Alert</button>
+    </div>
+
+    <audio id="alertSound" src="alert.mp3"></audio> <!-- Add your sound file here -->
+
+    <script>
+        document.getElementById("alertButton").addEventListener("click", function () {
+            const alertSound = document.getElementById("alertSound");
+
+            // Play the sound
+            alertSound.play();
+
+            // Delay the alert by 1 second (same as the duration of a typical alert sound)
+            setTimeout(function () {
+                alert("This is an alert message!");
+            }, 1000);  // Delay in milliseconds
+        });
+    </script>
+</body>
+</html>
